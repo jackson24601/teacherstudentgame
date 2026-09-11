@@ -134,14 +134,17 @@ body {
 .vs {
   display: grid;
   place-items: center;
-  width: 74px;
-  height: 74px;
+  width: 92px;
+  height: 92px;
+  padding-top: 6px;
   border-radius: 50%;
   background: var(--lemon);
-  color: var(--ink);
-  font-size: 1.8rem;
-  -webkit-text-stroke: 4px var(--ink);
+  color: #fff;
+  font-size: 2.35rem;
+  letter-spacing: 0.06em;
+  -webkit-text-stroke: 5px var(--ink);
   paint-order: stroke fill;
+  text-shadow: 3px 4px 0 #a16207;
   box-shadow:
     inset 0 -8px 0 rgba(161, 98, 7, 0.18),
     0 8px 0 #a16207;
@@ -348,18 +351,23 @@ body {
 
 .times-up {
   position: absolute;
-  inset: auto 8px 18px;
+  inset: 0;
+  display: grid;
+  place-items: center;
   font-family: "Luckiest Guy", cursive;
-  font-size: 1.35rem;
-  color: #fb7185;
-  -webkit-text-stroke: 4px var(--ink);
+  font-size: 2.15rem;
+  line-height: 0.95;
+  color: #fff;
+  -webkit-text-stroke: 6px var(--ink);
   paint-order: stroke fill;
+  text-shadow: 3px 4px 0 var(--teacher-deep);
   opacity: 0;
   pointer-events: none;
 }
 
 .timer[data-state="done"] .timer-value {
-  opacity: 0.18;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .timer[data-state="done"] .times-up {
@@ -386,8 +394,9 @@ body {
 
 .timer-btn:disabled {
   cursor: not-allowed;
-  filter: grayscale(0.35);
+  filter: grayscale(0.45) brightness(0.92);
   transform: none;
+  box-shadow: 0 4px 0 #64748b;
 }
 
 @media (max-width: 900px) {
